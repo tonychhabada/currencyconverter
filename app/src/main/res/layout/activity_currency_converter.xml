@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    tools:context=".ui.CurrencyConverterActivity">
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<TextView
+android:text="Base:"
+    android:layout_marginLeft="15dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:text=""
+            android:textStyle="bold"
+            android:id="@+id/txtBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+android:layout_marginTop="20dp"
+        android:id="@+id/rvCurrencies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

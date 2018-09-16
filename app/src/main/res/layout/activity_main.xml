@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="viewModel"  type="com.currencyconverter.viewmodel.CountryViewModel" />
+    </data>
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+
+    <LinearLayout
+        android:weightSum="4"
+        android:id="@+id/searchLayout"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:id="@+id/txtSearch"
+        android:text="@={viewModel.countryName}"
+        android:layout_height="wrap_content"
+
+        />
+        <Button
+            android:id="@+id/btnSearch"
+            android:text="Search"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/rvCountries"
+        android:visibility="gone"
+        android:layout_below="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:text="Enter your search query in textbox, Eg. IN,CA,AU,MY"
+        android:id="@+id/txtInformation"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+
+</layout>
